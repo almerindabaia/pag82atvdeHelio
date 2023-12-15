@@ -1,0 +1,37 @@
+package javaapplication4;
+
+import javax.swing.JOptionPane;
+
+public class JavaApplication4 {
+    
+public static void main(String[] args) {
+
+ int valor,quadrado,cubo ;
+
+         valor = Integer.parseInt(JOptionPane.showInputDialog("Digite um valor inteiro:"));
+
+   
+        if (valor % 2 == 0) {
+ 
+             quadrado = calculara(valor);
+            JOptionPane.showMessageDialog(null,"O quadrado "+quadrado);
+        } else {
+        
+           cubo = calcularo(valor);
+            JOptionPane.showMessageDialog(null,"O cubo "+ cubo);
+        }
+    }
+
+
+    private static int calculara(int valor) {
+        return valor * valor;
+    }
+    private static int calcularo(int valor) {
+        return valor * valor * valor;
+    }
+}
+
+    
+
+
+   

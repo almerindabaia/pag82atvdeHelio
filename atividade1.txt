@@ -1,0 +1,32 @@
+package javaapplication1;
+
+import javax.swing.JOptionPane;
+
+public class JavaApplication1{
+    
+public static void main(String[] args) {
+
+double saldoi,totald,totalc,saldof;
+        saldoi = Double.parseDouble(JOptionPane.showInputDialog("Digite o saldo inicial:"));
+        totald= Double.parseDouble(JOptionPane.showInputDialog("Digite o total de débitos:"));
+        totalc= Double.parseDouble(JOptionPane.showInputDialog("Digite o total de créditos:"));
+
+        
+        saldof = calcular(saldoi, totald, totalc);
+
+        // Exibe o resultado
+        if (saldof> 0) {
+            JOptionPane.showMessageDialog(null,"Saldo positivo" + saldof);
+        } else if (saldof < 0) {
+            JOptionPane.showMessageDialog(null,"Saldo negativo "+saldof);
+        } else {
+            JOptionPane.showMessageDialog(null, "Saldo zero.");
+        }
+    }
+
+   
+    private static double calcular(double saldoinicial, double totaldebitos, double totalcreditos) {
+        return saldoinicial - totaldebitos + totalcreditos;
+    }
+}
+

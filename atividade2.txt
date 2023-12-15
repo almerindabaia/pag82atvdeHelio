@@ -1,0 +1,53 @@
+package javaapplication2;
+
+import javax.swing.JOptionPane;
+
+public class JavaApplication2 {
+    
+public static void main(String[] args) {
+
+   
+    double altura,peso,imc;
+          altura = Double.parseDouble(JOptionPane.showInputDialog("Digite a altura em metro "));
+          peso = Double.parseDouble(JOptionPane.showInputDialog("Digite o peso em kg"));
+       
+       
+        imc = calcular(altura,peso);
+
+       
+        String classificacao = classifica(imc);
+
+      
+        JOptionPane.showMessageDialog(null, classificacao);
+    }
+
+    // Função para calcular o IMC
+    private static double calcular(double altura, double peso) {
+        return peso / (altura * altura);
+    }
+
+    // Função para classificar o IMC
+    private static String classifica(double imc) {
+        if (imc < 18.5) {
+            return "Abaixo do peso";
+        } else if (imc < 25) {
+            return "Peso normal";
+        } else if (imc < 30) {
+            return "Sobrepeso";
+        } else if (imc < 35) {
+            return "Obesidade leve";
+        } else if (imc < 40) {
+            return "Obesidade moderada";
+        } else {
+            return "Obesidade mórbida)";
+        }
+    }
+}
+
+    
+
+
+
+
+    
+

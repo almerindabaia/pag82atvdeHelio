@@ -1,0 +1,40 @@
+package javaapplication7;
+
+import javax.swing.JOptionPane;
+
+public class JavaApplication7{
+    
+public static void main(String[] args) {
+    
+  
+        double[] notas = new double[4];
+
+ 
+        for (int i = 0; i < 4; i++) {
+            String inputNota = JOptionPane.showInputDialog("Digite a nota da disciplina " + (i + 1) + ":");
+            notas[i] = Double.parseDouble(inputNota);
+        }
+
+        double media = calcula(notas);
+
+        if (media >= 6.0) {
+            JOptionPane.showMessageDialog(null,"Aluno APROVADO! "+ media);
+        } else {
+            JOptionPane.showMessageDialog(null,  "Aluno REPROVADO! " +media);
+        }
+    }
+
+    private static double calcula(double[] notas) {
+        double soma = 0;
+        for (double nota : notas) {
+            soma += nota;
+        }
+        return soma / notas.length;
+    }
+}
+
+
+    
+
+
+   

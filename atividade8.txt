@@ -1,0 +1,37 @@
+package javaapplication8;
+
+import javax.swing.JOptionPane;
+
+public class JavaApplication8 {
+    
+public static void main(String[] args) {
+    
+  
+   String x1,y2;
+   double x,y;
+        x1 = JOptionPane.showInputDialog("Digite o valor de x:");
+        y2 = JOptionPane.showInputDialog("Digite o valor de y:");
+        x = Double.parseDouble(x1);
+        y = Double.parseDouble(y2);
+
+        verifica(x, y);
+    }
+
+   
+    private static void verifica(double x, double y) {
+       
+        double valorEsperadoY = x * x - 3 * x + 1;
+  if (y == valorEsperadoY) {
+            JOptionPane.showMessageDialog(null, "pertence à parábola.");
+        } else {
+            JOptionPane.showMessageDialog(null,  "não pertence à parábola.");
+        }
+    }
+    }
+
+
+
+    
+
+
+   

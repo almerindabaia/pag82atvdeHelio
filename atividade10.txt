@@ -1,0 +1,30 @@
+package javaapplication10;
+
+import javax.swing.JOptionPane;
+
+public class JavaApplication10 {
+    
+public static void main(String[] args) {
+   
+ 
+        String[] nome = new String[3];
+        int[] voto = new int[3];
+
+        for (int i = 0; i < 3; i++) {
+            nome[i] = JOptionPane.showInputDialog(" nome do candidato " + (i + 1) + ":");
+            voto[i] = Integer.parseInt(JOptionPane.showInputDialog("Digite o total de votos para o candidato " + nome[i] + ":"));
+        }
+        int indice = vencedor(voto);
+        JOptionPane.showMessageDialog(null,
+                "O vencedor é: " + nome[indice] + " com " + voto[indice] + " votos.");
+    }
+    private static int vencedor(int[] votos) {
+        int indice= 0;
+        for (int i = 1; i < votos.length; i++) {
+            if (votos[i] > votos[indice]) {
+                indice = i;
+            }
+        }
+        return indice;
+    }
+}

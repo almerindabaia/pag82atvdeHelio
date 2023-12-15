@@ -1,0 +1,33 @@
+package javaapplication3;
+
+import javax.swing.JOptionPane;
+
+public class JavaApplication3 {
+    
+public static void main(String[] args) {
+
+    int diasemana,idade,descontos;
+    double preco,desconto,descontoi;
+       
+          diasemana = Integer.parseInt(JOptionPane.showInputDialog("Digite o dia da semana "));
+          preco = Double.parseDouble(JOptionPane.showInputDialog(" preço base do ingresso:"));
+          idade = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade do cliente:"));
+
+        descontoi = (idade < 14) ? 0.5 : 0.0;
+      
+        double descontosemana = (diasemana == 3) ? 0.5 : 0.0;
+
+       
+        double valorpagar = calcular(preco, descontoi, descontosemana);
+
+       
+        JOptionPane.showMessageDialog(null,"Valor a pagar " +valorpagar);
+    }
+
+    private static double calcular(double precoa, double descontob, double descontoc) {
+        double valord = precoa * (1.0 - descontob) * (1.0 - descontoc);
+        return valord;
+    }
+}
+
+   

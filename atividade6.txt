@@ -1,0 +1,36 @@
+package javaapplication6;
+
+import javax.swing.JOptionPane;
+
+public class JavaApplication6{
+    
+public static void main(String[] args) {
+    
+  String anoa;
+  int ano;
+        anoa = JOptionPane.showInputDialog("Digite um ano");
+        ano = Integer.parseInt(anoa);
+
+        if (verifica(ano)) {
+            JOptionPane.showMessageDialog(null, ano + " é um ano bissexto.");
+        } else {
+            JOptionPane.showMessageDialog(null, ano + " não é um ano bissexto.");
+        }
+    }
+
+   
+    private static boolean verifica(int ano) {
+        return (ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0);
+    }
+}
+
+
+    
+
+
+
+
+    
+
+
+   
